@@ -19,9 +19,6 @@ export default function Home() {
              <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent pb-2">
                 ToolBits
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Essential developer utilities. No ads, no tracking, just tools.
-            </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
