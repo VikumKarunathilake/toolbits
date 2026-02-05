@@ -8,13 +8,16 @@ import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
+import dynamic from "next/dynamic";
 
-export default function UnixTimestampConverter() {
+const Calendar = dynamic(() => import("@/components/ui/calendar").then((mod) => mod.Calendar), {
+  loading: () => <div className="h-[300px] w-full flex items-center justify-center bg-muted/20 animate-pulse rounded-md" />,
+});
+
+export default function UnixTimestampConverterClient({ children }: { children?: React.ReactNode }) {
   const [timestamp, setTimestamp] = useState<string>("");
   const [date, setDate] = useState<Date | undefined>(new Date());
   
@@ -208,6 +211,7 @@ export default function UnixTimestampConverter() {
             </Card>
 
         </div>
+        {children}
       </div>
     </div>
   );

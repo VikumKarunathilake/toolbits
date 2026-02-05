@@ -3,16 +3,19 @@
 import { useState } from "react";
 import { Copy, Trash2, Check, AlertCircle, FileJson, Minimize2, Wand2 } from "lucide-react";
 import { toast } from "sonner";
-
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { SyntaxHighlight } from "@/components/syntax-highlight";
+import dynamic from "next/dynamic";
 
-export default function JsonFormatter() {
+const SyntaxHighlight = dynamic(() => import("@/components/syntax-highlight").then(mod => mod.SyntaxHighlight), {
+  loading: () => <div className="h-full w-full bg-muted/10 animate-pulse" />,
+});
+
+export default function JsonFormatterClient({ children }: { children?: React.ReactNode }) {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -55,8 +58,6 @@ export default function JsonFormatter() {
     setError(null);
     toast.info("Cleared all fields");
   };
-
-
 
   return (
     <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
@@ -153,6 +154,7 @@ export default function JsonFormatter() {
           </Card>
 
         </div>
+        {children}
       </div>
     </div>
   );

@@ -1,17 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ShieldCheck, Lock, FileJson, AlertCircle, Copy, Check } from "lucide-react";
+import { ShieldCheck, Lock, AlertCircle, Copy } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { SyntaxHighlight } from "@/components/syntax-highlight";
 import { Badge } from "@/components/ui/badge";
+import dynamic from "next/dynamic";
 
-export default function JwtDecoder() {
+const SyntaxHighlight = dynamic(() => import("@/components/syntax-highlight").then(mod => mod.SyntaxHighlight), {
+  loading: () => <div className="h-full w-full bg-muted/10 animate-pulse" />,
+});
+
+export default function JwtDecoderClient({ children }: { children?: React.ReactNode }) {
   const [token, setToken] = useState("");
   const [header, setHeader] = useState<string | null>(null);
   const [payload, setPayload] = useState<string | null>(null);
@@ -157,6 +160,7 @@ export default function JwtDecoder() {
             </Card>
         </div>
 
+        {children}
       </div>
     </div>
   );
