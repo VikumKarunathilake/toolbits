@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  productionBrowserSourceMaps: true,
 };
 
 export default nextConfig;

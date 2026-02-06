@@ -5,7 +5,7 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "Unix Timestamp Converter",
-  description: "Convert between Unix Timestamps and Human Readable Dates. Supports seconds, milliseconds, and ISO formats.",
+  description: "Convert Epoch time to human-readable dates and vice versa. Supports ISO 8601, UTC, and local time zones.",
 };
 
 export default function UnixTimestampConverter() {

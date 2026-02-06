@@ -4,8 +4,8 @@ const Base64ConverterClient = dynamic(() => import('./client'));
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: "Base64 Converter",
-  description: "Encode and decode text or files to Base64 format securely. Free online Base64 tool for developers.",
+  title: "Base64 Encoder / Decoder",
+  description: "Convert text and files to Base64 (Data URI) format instantly. Decode Base64 strings securely without server-side processing.",
 };
 
 export default function Base64Converter() {

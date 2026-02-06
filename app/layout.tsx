@@ -19,13 +19,15 @@ export const metadata: Metadata = {
   },
   description: "A collection of essential tools",
   keywords: [
-    "tools",
-    "json formatter",
-    "base64 converter",
-    "jwt decoder",
-    "uuid generator",
-    "web tools",
-    "unix timestamp",
+    "developer tools",
+    "online json formatter",
+    "base64 encoder decoder",
+    "jwt debugger",
+    "uuid generator v4",
+    "unix timestamp converter",
+    "url encode decode",
+    "web development utilities",
+    "privacy-first tools"
   ],
   authors: [{ name: "ToolBits Team" }],
   creator: "ToolBits",
@@ -72,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${jetbrainsMono.variable} antialiased`}>
         <Script
           id="google-analytics"

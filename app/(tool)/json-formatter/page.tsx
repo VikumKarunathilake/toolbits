@@ -4,8 +4,8 @@ const JsonFormatterClient = dynamic(() => import('./client'));
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: "JSON Formatter",
-  description: "Format, validate, and try to make sense of your messy JSON data. Use our free online JSON Formatter and Minifier.",
+  title: "JSON Formatter & Validator",
+  description: "Free online JSON Formatter to beautify, minify, and validate JSON data. Fix syntax errors and debug APIs instantly.",
 };
 
 export default function JsonFormatter() {

@@ -16,7 +16,7 @@ export default function Home() {
     <div className="min-h-screen bg-background font-sans selection:bg-primary/10">
       <main className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16 space-y-4">
-             <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent pb-2">
+             <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent pb-2">
                 ToolBits
             </h1>
         </div>

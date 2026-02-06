@@ -5,7 +5,7 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "URL Encoder / Decoder",
-  description: "Encode text to URL-safe format (percent-encoding) or decode URLs back to their original text.",
+  description: "Percent-encode text for Safe URL use. Decode complex URLs and query strings instantly in your browser.",
 };
 
 export default function UrlEncoderPage() {

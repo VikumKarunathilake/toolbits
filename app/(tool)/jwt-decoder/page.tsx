@@ -4,8 +4,8 @@ const JwtDecoderClient = dynamic(() => import('./client'));
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: "JWT Decoder",
-  description: "Decode and inspect JSON Web Tokens (JWT) securely in your browser without sending them to a server.",
+  title: "JWT Decoder & Debugger",
+  description: "Decode JSON Web Tokens (JWT) to view headers and payloads. fast, free, and secure client-side debugging tool.",
 };
 
 export default function JwtDecoder() {

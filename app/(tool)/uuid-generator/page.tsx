@@ -5,7 +5,7 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "UUID Generator",
-  description: "Generate random UUIDs (v4) online. Free bulk UUID generator tool for developers to create unique identifiers.",
+  description: "Generate random UUIDs (v4) in bulk. Copy, customize, and export unique identifiers for your database or application development.",
 };
 
 export default function UuidGeneratorPage() {
