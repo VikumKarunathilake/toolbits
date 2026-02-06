@@ -1,9 +1,9 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://toolbits.vercel.app',
+  siteUrl: "https://toolbits.vercel.app",
   generateRobotsTxt: true,
   sitemapSize: 7000,
-  changefreq: 'daily',
+  changefreq: "daily",
   priority: 0.7,
-  exclude: ['/admin/*', '/api/*', '/_not-found/*'],
+  exclude: ["/admin/*", "/api/*", "/_not-found/*"],
 };

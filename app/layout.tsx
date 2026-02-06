@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "unix timestamp converter",
     "url encode decode",
     "web development utilities",
-    "privacy-first tools"
+    "privacy-first tools",
   ],
   authors: [{ name: "ToolBits Team" }],
   creator: "ToolBits",
@@ -89,11 +89,7 @@ export default function RootLayout({
             gtag('config', 'G-MP6V4HLLGW');
           `}
         </Script>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
           <Toaster />
         </ThemeProvider>

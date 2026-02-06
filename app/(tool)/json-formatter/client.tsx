@@ -1,21 +1,43 @@
 "use client";
 
 import { useState } from "react";
-import { Copy, Trash2, Check, AlertCircle, FileJson, Minimize2, Wand2 } from "lucide-react";
+import {
+  Copy,
+  Trash2,
+  Check,
+  AlertCircle,
+  FileJson,
+  Minimize2,
+  Wand2,
+} from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import dynamic from "next/dynamic";
 
-const SyntaxHighlight = dynamic(() => import("@/components/syntax-highlight").then(mod => mod.SyntaxHighlight), {
-  loading: () => <div className="h-full w-full bg-muted/10 animate-pulse" />,
-});
+const SyntaxHighlight = dynamic(
+  () =>
+    import("@/components/syntax-highlight").then((mod) => mod.SyntaxHighlight),
+  {
+    loading: () => <div className="h-full w-full bg-muted/10 animate-pulse" />,
+  },
+);
 
-export default function JsonFormatterClient({ children }: { children?: React.ReactNode }) {
+export default function JsonFormatterClient({
+  children,
+}: {
+  children?: React.ReactNode;
+}) {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -62,7 +84,6 @@ export default function JsonFormatterClient({ children }: { children?: React.Rea
   return (
     <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-6">
-        
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
@@ -71,7 +92,7 @@ export default function JsonFormatterClient({ children }: { children?: React.Rea
               Format, validate, and try to make sense of your messy JSON.
             </p>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <Button onClick={handleFormat} className="gap-2">
               <Wand2 className="w-4 h-4" /> Format
@@ -80,7 +101,12 @@ export default function JsonFormatterClient({ children }: { children?: React.Rea
               <Minimize2 className="w-4 h-4" /> Minify
             </Button>
             <Separator orientation="vertical" className="h-8 mx-1" />
-            <Button variant="ghost" size="icon" onClick={handleClear} className="text-destructive hover:text-destructive hover:bg-destructive/10">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleClear}
+              className="text-destructive hover:text-destructive hover:bg-destructive/10"
+            >
               <Trash2 className="w-4 h-4" />
             </Button>
           </div>
@@ -88,7 +114,6 @@ export default function JsonFormatterClient({ children }: { children?: React.Rea
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-[calc(100vh-200px)] min-h-[500px]">
-          
           {/* Input Pane */}
           <Card className="flex flex-col h-full border-muted-foreground/20 shadow-sm">
             <CardHeader className="pb-3 px-6 pt-6">
@@ -97,7 +122,7 @@ export default function JsonFormatterClient({ children }: { children?: React.Rea
               </CardTitle>
             </CardHeader>
             <CardContent className="flex-1 p-0 relative group">
-              <Textarea 
+              <Textarea
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Paste your JSON here..."
@@ -106,15 +131,18 @@ export default function JsonFormatterClient({ children }: { children?: React.Rea
               />
             </CardContent>
             {error && (
-               <div className="p-4 border-t bg-destructive/5">
-                <Alert variant="destructive" className="border-0 bg-transparent p-0 [&>svg]:top-0 [&>svg]:text-destructive">
+              <div className="p-4 border-t bg-destructive/5">
+                <Alert
+                  variant="destructive"
+                  className="border-0 bg-transparent p-0 [&>svg]:top-0 [&>svg]:text-destructive"
+                >
                   <AlertCircle className="h-4 w-4" />
                   <AlertTitle className="ml-2">Syntax Error</AlertTitle>
                   <AlertDescription className="ml-2 font-mono text-xs mt-1">
                     {error}
                   </AlertDescription>
                 </Alert>
-               </div>
+              </div>
             )}
           </Card>
 
@@ -124,9 +152,9 @@ export default function JsonFormatterClient({ children }: { children?: React.Rea
               <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
                 <Check className="w-4 h-4" /> Output
               </CardTitle>
-              <Button 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                variant="ghost"
+                size="sm"
                 className="h-8 gap-1.5 text-muted-foreground hover:text-foreground"
                 onClick={handleCopy}
                 disabled={!output}
@@ -134,9 +162,9 @@ export default function JsonFormatterClient({ children }: { children?: React.Rea
                 <Copy className="w-3.5 h-3.5" /> Copy
               </Button>
             </CardHeader>
-            
+
             <Separator />
-            
+
             <CardContent className="flex-1 p-0 overflow-hidden relative">
               {output ? (
                 <ScrollArea className="h-full w-full">
@@ -147,12 +175,13 @@ export default function JsonFormatterClient({ children }: { children?: React.Rea
               ) : (
                 <div className="h-full flex flex-col items-center justify-center text-muted-foreground/40">
                   <FileJson className="w-12 h-12 mb-3 opacity-20" />
-                  <p className="text-sm font-medium">Processed output will appear here</p>
+                  <p className="text-sm font-medium">
+                    Processed output will appear here
+                  </p>
                 </div>
               )}
             </CardContent>
           </Card>
-
         </div>
         {children}
       </div>
