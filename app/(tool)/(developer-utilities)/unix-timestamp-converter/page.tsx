@@ -7,6 +7,48 @@ export const metadata: Metadata = {
   title: "Unix Timestamp Converter",
   description:
     "Convert Epoch time to human-readable dates and vice versa. Supports ISO 8601, UTC, and local time zones.",
+  keywords: [
+    "unix timestamp converter",
+    "epoch converter",
+    "unix time",
+    "timestamp to date",
+    "date to timestamp",
+    "epoch time",
+    "human readable date",
+    "iso 8601 converter",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/unix-timestamp-converter",
+    title: "Unix Timestamp Converter",
+    description:
+      "Easily convert Unix timestamps to readable dates and vice versa.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Unix Timestamp Converter",
+    description: "Convert Unix timestamps to readable dates instantly.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/unix-timestamp-converter",
+  },
 };
 
 export default function UnixTimestampConverter() {

@@ -7,6 +7,48 @@ export const metadata: Metadata = {
   title: "Word Counter & Character Count Tool",
   description:
     "Free online word counter and character counter with reading time estimation. Perfect for writers, students, and SEO professionals.",
+  keywords: [
+    "word counter",
+    "character counter",
+    "letter count",
+    "word count tool",
+    "sentence counter",
+    "paragraph counter",
+    "reading time calculator",
+    "text analyzer",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/word-counter",
+    title: "Word Counter & Character Counter",
+    description:
+      "Count words, characters, and estimate reading time instantly for free.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Word Counter",
+    description: "Instant word and character counting for your text.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/word-counter",
+  },
 };
 
 export default function WordCounterPage() {

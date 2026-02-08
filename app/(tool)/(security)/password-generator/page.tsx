@@ -7,6 +7,48 @@ export const metadata: Metadata = {
   title: "Strong Password Generator - Secure & Random",
   description:
     "Generate strong, secure, and random passwords instantly. Customize options for length, symbols, numbers, and uppercase letters.",
+  keywords: [
+    "password generator",
+    "strong password",
+    "random password",
+    "secure password",
+    "password maker",
+    "password creator",
+    "online password generator",
+    "password strength",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/password-generator",
+    title: "Strong Password Generator",
+    description:
+      "Create secure, random passwords instantly. Client-side generation for maximum security.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Strong Password Generator",
+    description: "Generate secure, random passwords instantly.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/password-generator",
+  },
 };
 
 export default function PasswordGeneratorPage() {

@@ -7,6 +7,47 @@ export const metadata: Metadata = {
   title: "Meta Tag Generator - SEO & Social Media Tags",
   description:
     "Generate SEO-optimized meta tags, Open Graph tags for Facebook, and Twitter Cards for your website instantly.",
+  keywords: [
+    "meta tag generator",
+    "seo meta tags",
+    "open graph generator",
+    "twitter card generator",
+    "seo tools",
+    "meta description generator",
+    "social media tags",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/meta-tag-generator",
+    title: "Meta Tag Generator | SEO & Social",
+    description:
+      "Create perfect meta tags for SEO and social media sharing. Boost your website's visibility.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meta Tag Generator",
+    description: "Generate SEO and social media meta tags instantly.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/meta-tag-generator",
+  },
 };
 
 export default function MetaTagGeneratorPage() {

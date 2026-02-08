@@ -7,6 +7,48 @@ export const metadata: Metadata = {
   title: "JWT Decoder & Debugger",
   description:
     "Decode JSON Web Tokens (JWT) to view headers and payloads. fast, free, and secure client-side debugging tool.",
+  keywords: [
+    "jwt decoder",
+    "jwt debugger",
+    "json web token",
+    "decode jwt",
+    "jwt viewer",
+    "jwt inspector",
+    "jwt checker",
+    "token decoder",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/jwt-decoder",
+    title: "JWT Decoder & Debugger",
+    description:
+      "Decode and inspect JSON Web Tokens (JWT) securely in your browser. No server-side processing.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JWT Decoder",
+    description: "Decode and inspect JSON Web Tokens instantly.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/jwt-decoder",
+  },
 };
 
 export default function JwtDecoder() {

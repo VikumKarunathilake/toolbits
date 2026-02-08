@@ -7,6 +7,48 @@ export const metadata: Metadata = {
   title: "UUID Generator",
   description:
     "Generate random UUIDs (v4) in bulk. Copy, customize, and export unique identifiers for your database or application development.",
+  keywords: [
+    "uuid generator",
+    "guid generator",
+    "random uuid",
+    "bulk uuid",
+    "unique identifier",
+    "uuid v4",
+    "generate guid",
+    "database keys",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/uuid-generator",
+    title: "UUID Generator | Bulk Random UUIDs",
+    description:
+      "Generate random Version 4 UUIDs instantly. Free online bulk UUID generator.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UUID Generator",
+    description: "Generate random UUIDs instantly.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/uuid-generator",
+  },
 };
 
 export default function UuidGeneratorPage() {

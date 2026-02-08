@@ -7,6 +7,51 @@ export const metadata: Metadata = {
   title: "Case Converter - Uppercase, Lowercase, CamelCase & More",
   description:
     "Easily convert text between Upper Case, Lower Case, Title Case, Sentence Case, Camel Case, and more. Free online text transformation tool.",
+  keywords: [
+    "case converter",
+    "text converter",
+    "uppercase",
+    "lowercase",
+    "title case",
+    "camel case",
+    "kebab case",
+    "snake case",
+    "sentence case",
+    "text transformation",
+    "online case changer",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/case-converter",
+    title: "Case Converter | Free Online Text Tool",
+    description:
+      "Instantly convert text case: UPPERCASE, lowercase, CamelCase, and more. Simple and free.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Converter - Uppercase, Lowercase & More",
+    description: "Easily convert text between different cases instantly.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/case-converter",
+  },
 };
 
 export default function CaseConverterPage() {

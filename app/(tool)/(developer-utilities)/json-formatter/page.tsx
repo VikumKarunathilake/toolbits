@@ -6,7 +6,51 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "JSON Formatter & Validator",
   description:
-    "Free online JSON Formatter to beautify, minify, and validate JSON data. Fix syntax errors and debug APIs instantly.",
+    "Beautify, validate, and minify your JSON data instantly. Ideally suited for developers debugging APIs and logs.",
+  keywords: [
+    "json formatter",
+    "json prettify",
+    "json validator",
+    "json minifier",
+    "json editor",
+    "online json tool",
+    "developer tools",
+    "debug json",
+    "format json",
+    "json syntax check",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/json-formatter",
+    title: "JSON Formatter & Validator | Free Online Tool",
+    description:
+      "Beautify, validate, and minify your JSON data instantly. The best free online JSON tool for developers.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JSON Formatter & Validator",
+    description: "Beautify, validate, and minify your JSON data instantly.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/json-formatter",
+  },
 };
 
 export default function JsonFormatter() {

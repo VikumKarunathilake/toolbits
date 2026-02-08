@@ -7,6 +7,48 @@ export const metadata: Metadata = {
   title: "URL Encoder / Decoder",
   description:
     "Percent-encode text for Safe URL use. Decode complex URLs and query strings instantly in your browser.",
+  keywords: [
+    "url encoder",
+    "url decoder",
+    "percent encoding",
+    "encode url",
+    "decode url",
+    "url tool",
+    "query string decoder",
+    "url characters",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/url-encoder",
+    title: "URL Encoder / Decoder",
+    description:
+      "Encode and decode URLs instantly. Handle special characters with ease.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "URL Encoder / Decoder",
+    description: "Encode and decode URLs instantly.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/url-encoder",
+  },
 };
 
 export default function UrlEncoderPage() {

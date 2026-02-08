@@ -7,6 +7,49 @@ export const metadata: Metadata = {
   title: "QR Code Generator - Free Online QR Creator",
   description:
     "Create free, customizable QR codes for URLs, text, Wi-Fi, and more. Download high-quality PNG images instantly.",
+  keywords: [
+    "qr code generator",
+    "free qr code",
+    "make qr code",
+    "qr code creator",
+    "qr code maker",
+    "url to qr",
+    "wifi qr code",
+    "text qr code",
+    "custom qr code",
+  ],
+  authors: [{ name: "Toolbits", url: "https://toolbits.vercel.app" }],
+  creator: "Toolbits",
+  publisher: "Toolbits",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolbits.vercel.app/qr-code",
+    title: "Free QR Code Generator",
+    description:
+      "Generate custom QR codes for links, text, and Wi-Fi. Fast, free, and no sign-up required.",
+    siteName: "Toolbits",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "QR Code Generator",
+    description: "Create and download custom QR codes instantly for free.",
+    creator: "@toolbits",
+  },
+  alternates: {
+    canonical: "https://toolbits.vercel.app/qr-code",
+  },
 };
 
 export default function QrCodeGeneratorPage() {
