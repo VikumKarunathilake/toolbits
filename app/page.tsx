@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FileJson, Timer, Clock, Keyboard } from "lucide-react";
+import { FileJson, Timer, Clock, Keyboard, Regex, CalendarClock, Database, FileCode } from "lucide-react";
 import {
   Card,
   CardHeader,
@@ -176,6 +176,30 @@ const categories: Category[] = [
         description: "Press any key to identify its JavaScript event key code, physical code, and location.",
         href: "/key-code",
         icon: <Keyboard className={iconClasses} />,
+      },
+      {
+        title: "Regex Tester",
+        description: "Test and debug regular expressions with real-time highlighting and explanation.",
+        href: "/regex-tester",
+        icon: <Regex className={iconClasses} />,
+      },
+      {
+        title: "Cron Parser",
+        description: "Convert cron expressions into human-readable descriptions and view upcoming scheduled run times.",
+        href: "/cron-parser",
+        icon: <CalendarClock className={iconClasses} />,
+      },
+      {
+        title: "SQL Formatter",
+        description: "Beautify and format complex SQL queries with support for various dialects like PostgreSQL, MySQL, and generic SQL.",
+        href: "/sql-formatter",
+        icon: <Database className={iconClasses} />,
+      },
+      {
+        title: "XML Formatter",
+        description: "Format, indent, and prettify XML data online. Improve readability of XML files and strings instantly.",
+        href: "/xml-formatter",
+        icon: <FileCode className={iconClasses} />,
       },
     ],
   },
