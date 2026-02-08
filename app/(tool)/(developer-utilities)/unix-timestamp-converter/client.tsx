@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import {
-  Clock,
-  Calendar as CalendarIcon,
-  ArrowRightLeft,
-  Copy,
-  RefreshCcw,
-} from "lucide-react";
+  LuClock,
+  LuCalendar as LuCalendarIcon,
+  LuArrowRightLeft,
+  LuCopy,
+  LuRefreshCcw,
+} from "react-icons/lu";
 import { toast } from "sonner";
 import { format } from "date-fns";
 
@@ -130,7 +130,7 @@ export default function UnixTimestampConverterClient({
             </p>
           </div>
           <Button onClick={setNow} variant="outline" className="gap-2">
-            <RefreshCcw className="w-4 h-4" /> Reset to Now
+            <LuRefreshCcw className="w-4 h-4" /> Reset to Now
           </Button>
         </div>
 
@@ -139,7 +139,7 @@ export default function UnixTimestampConverterClient({
           <Card className="border-muted-foreground/20 shadow-sm md:col-span-2 lg:col-span-1">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <ArrowRightLeft className="w-5 h-5 text-primary" />
+                <LuArrowRightLeft className="w-5 h-5 text-primary" />
                 Converter
               </CardTitle>
               <CardDescription>
@@ -163,7 +163,7 @@ export default function UnixTimestampConverterClient({
                     size="icon"
                     onClick={() => copyToClipboard(timestamp, "Timestamp")}
                   >
-                    <Copy className="w-4 h-4" />
+                    <LuCopy className="w-4 h-4" />
                   </Button>
                 </div>
                 <p className="text-[0.8rem] text-muted-foreground">
@@ -192,7 +192,7 @@ export default function UnixTimestampConverterClient({
                         !date && "text-muted-foreground",
                       )}
                     >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      <LuCalendarIcon className="mr-2 h-4 w-4" />
                       {date ? format(date, "PPP pp") : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>
@@ -213,7 +213,7 @@ export default function UnixTimestampConverterClient({
           <Card className="border-muted-foreground/20 shadow-sm md:col-span-2 lg:col-span-1">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-primary" />
+                <LuClock className="w-5 h-5 text-primary" />
                 Formats
               </CardTitle>
               <CardDescription>
@@ -247,7 +247,7 @@ export default function UnixTimestampConverterClient({
                               className="h-6 w-6"
                               onClick={() => copyToClipboard(f.value, f.label)}
                             >
-                              <Copy className="w-3 h-3" />
+                              <LuCopy className="w-3 h-3" />
                             </Button>
                           </TableCell>
                         </TableRow>

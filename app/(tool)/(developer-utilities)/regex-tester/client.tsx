@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { Copy, Trash2, AlertCircle, Regex, Zap, List } from "lucide-react";
+import { LuCopy, LuTrash2, LuCircleAlert, LuRegex, LuZap, LuList } from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -161,10 +161,10 @@ export default function RegexTesterClient({
               className="text-destructive hover:text-destructive hover:bg-destructive/10"
               title="Clear All"
             >
-              <Trash2 className="w-4 h-4" />
+              <LuTrash2 className="w-4 h-4" />
             </Button>
             <Button onClick={handleCopyPattern} className="gap-2">
-              <Copy className="w-4 h-4" /> Copy Pattern
+              <LuCopy className="w-4 h-4" /> Copy Pattern
             </Button>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function RegexTesterClient({
             <Card className="border-muted-foreground/20 shadow-sm overflow-visible">
               <CardHeader className="pb-3">
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                  <Regex className="w-4 h-4" /> Regular Expression
+                  <LuRegex className="w-4 h-4" /> Regular Expression
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -202,7 +202,7 @@ export default function RegexTesterClient({
 
                 {error && (
                   <Alert variant="destructive" className="py-2">
-                    <AlertCircle className="h-4 w-4" />
+                    <LuCircleAlert className="h-4 w-4" />
                     <AlertTitle>Invalid Regex</AlertTitle>
                     <AlertDescription className="text-xs font-mono">
                       {error}
@@ -264,7 +264,7 @@ export default function RegexTesterClient({
               <Card className="border-muted-foreground/20 shadow-sm">
                 <CardHeader className="pb-3 flex flex-row items-center justify-between">
                   <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                   <Zap className="w-4 h-4 text-yellow-500" /> Match Highlights
+                   <LuZap className="w-4 h-4 text-yellow-500" /> Match Highlights
                   </CardTitle>
                   <div className="text-xs text-muted-foreground">
                     {matches.length} matches found ({executionTime.toFixed(2)}ms)
@@ -322,7 +322,7 @@ export default function RegexTesterClient({
             <Card className="border-muted-foreground/20 shadow-sm">
                <CardHeader className="pb-3">
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                  <List className="w-4 h-4" /> Cheatsheet
+                  <LuList className="w-4 h-4" /> Cheatsheet
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-0">

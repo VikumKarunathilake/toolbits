@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { Play, Pause, RotateCcw, Flag, Clock } from "lucide-react";
+import { LuPlay, LuPause, LuRotateCcw, LuFlag, LuClock } from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -114,7 +114,7 @@ export default function StopwatchClient({
             <Card className="h-fit shadow-md border-border/60">
                 <CardHeader className="text-center pb-2">
                     <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
-                        <Clock className="w-6 h-6" />
+                        <LuClock className="w-6 h-6" />
                     </div>
                     <CardTitle className="text-xl">Timer</CardTitle>
                 </CardHeader>
@@ -133,7 +133,7 @@ export default function StopwatchClient({
                             onClick={handleReset}
                             disabled={isRunning}
                         >
-                            <RotateCcw className="w-5 h-5" />
+                            <LuRotateCcw className="w-5 h-5" />
                         </Button>
 
                         <Button
@@ -142,9 +142,9 @@ export default function StopwatchClient({
                             onClick={handleStartStop}
                         >
                              {isRunning ? (
-                                <Pause className="w-8 h-8 fill-current" />
+                                <LuPause className="w-8 h-8 fill-current" />
                              ) : (
-                                <Play className="w-8 h-8 fill-current ml-1" />
+                                <LuPlay className="w-8 h-8 fill-current ml-1" />
                              )}
                         </Button>
 
@@ -155,7 +155,7 @@ export default function StopwatchClient({
                             onClick={handleLap}
                             disabled={!isRunning}
                         >
-                            <Flag className="w-5 h-5" />
+                            <LuFlag className="w-5 h-5" />
                         </Button>
                     </div>
                 </CardContent>
@@ -170,7 +170,7 @@ export default function StopwatchClient({
                 <CardContent className="flex-1 p-0 relative min-h-[300px]">
                    {laps.length === 0 ? (
                        <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground opacity-50">
-                           <Flag className="w-10 h-10 mb-2" />
+                           <LuFlag className="w-10 h-10 mb-2" />
                            <p>No laps recorded yet</p>
                        </div>
                    ) : (

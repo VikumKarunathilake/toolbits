@@ -2,12 +2,12 @@
 
 import { useState, useCallback, useEffect } from "react";
 import {
-  Copy,
-  RefreshCw,
-  ShieldCheck,
-  ShieldAlert,
-  Shield,
-} from "lucide-react";
+  LuCopy,
+  LuRefreshCw,
+  LuShieldCheck,
+  LuShieldAlert,
+  LuShield,
+} from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -161,7 +161,7 @@ export default function PasswordGeneratorClient({
                   variant="outline"
                   title="Regenerate"
                 >
-                  <RefreshCw className="w-5 h-5" />
+                  <LuRefreshCw className="w-5 h-5" />
                 </Button>
                 <Button
                   onClick={handleCopy}
@@ -169,18 +169,18 @@ export default function PasswordGeneratorClient({
                   className="h-14 w-14 shrink-0"
                   title="Copy"
                 >
-                  <Copy className="w-5 h-5" />
+                  <LuCopy className="w-5 h-5" />
                 </Button>
               </div>
 
               <div className="flex justify-between items-center text-sm">
                 <div className="flex items-center gap-2">
                   {strength >= 70 ? (
-                    <ShieldCheck className="w-4 h-4 text-green-500" />
+                    <LuShieldCheck className="w-4 h-4 text-green-500" />
                   ) : strength >= 40 ? (
-                    <Shield className="w-4 h-4 text-yellow-500" />
+                    <LuShield className="w-4 h-4 text-yellow-500" />
                   ) : (
-                    <ShieldAlert className="w-4 h-4 text-red-500" />
+                    <LuShieldAlert className="w-4 h-4 text-red-500" />
                   )}
                   <span className="font-medium text-muted-foreground">
                     Strength:{" "}

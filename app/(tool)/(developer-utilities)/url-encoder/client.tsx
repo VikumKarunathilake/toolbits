@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import {
-  Copy,
-  Trash2,
-  Check,
-  Link2,
-  ArrowRightLeft,
-  FileText,
-  ArrowDownUp,
-} from "lucide-react";
+  LuCopy,
+  LuTrash2,
+  LuCheck,
+  LuLink2,
+  LuArrowRightLeft,
+  LuFileText,
+  LuArrowDownUp,
+} from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -75,10 +75,10 @@ export default function UrlEncoderClient({
 
           <div className="flex items-center gap-2">
             <Button onClick={handleEncode} className="gap-2">
-              <Link2 className="w-4 h-4" /> Encode
+              <LuLink2 className="w-4 h-4" /> Encode
             </Button>
             <Button variant="outline" onClick={handleDecode} className="gap-2">
-              <ArrowDownUp className="w-4 h-4" /> Decode
+              <LuArrowDownUp className="w-4 h-4" /> Decode
             </Button>
             <Separator orientation="vertical" className="h-8 mx-1" />
             <Button
@@ -87,7 +87,7 @@ export default function UrlEncoderClient({
               onClick={handleClear}
               className="text-destructive hover:text-destructive hover:bg-destructive/10"
             >
-              <Trash2 className="w-4 h-4" />
+              <LuTrash2 className="w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function UrlEncoderClient({
           <Card className="flex flex-col h-full border-muted-foreground/20 shadow-sm">
             <CardHeader className="pb-3 px-6 pt-6">
               <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                <FileText className="w-4 h-4" /> Input
+                <LuFileText className="w-4 h-4" /> Input
               </CardTitle>
             </CardHeader>
             <CardContent className="flex-1 p-0 relative group">
@@ -116,7 +116,7 @@ export default function UrlEncoderClient({
           <Card className="flex flex-col h-full border-muted-foreground/20 shadow-sm bg-muted/30">
             <CardHeader className="pb-3 px-6 pt-6 flex flex-row items-center justify-between space-y-0">
               <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                <Check className="w-4 h-4" /> Output
+                <LuCheck className="w-4 h-4" /> Output
               </CardTitle>
               <Button
                 variant="ghost"
@@ -125,7 +125,7 @@ export default function UrlEncoderClient({
                 onClick={handleCopy}
                 disabled={!output}
               >
-                <Copy className="w-3.5 h-3.5" /> Copy
+                <LuCopy className="w-3.5 h-3.5" /> Copy
               </Button>
             </CardHeader>
 

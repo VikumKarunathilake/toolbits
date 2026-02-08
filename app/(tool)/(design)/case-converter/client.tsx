@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import {
-  Copy,
-  Trash2,
-  ArrowRightLeft,
-  CaseUpper,
-  CaseLower,
-  Type,
-} from "lucide-react";
+  LuCopy,
+  LuTrash2,
+  LuArrowRightLeft,
+  LuCaseUpper,
+  LuCaseLower,
+  LuType,
+} from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -136,7 +136,7 @@ export default function CaseConverterClient({
               onClick={handleClear}
               className="text-destructive hover:text-destructive hover:bg-destructive/10"
             >
-              <Trash2 className="w-4 h-4" />
+              <LuTrash2 className="w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -248,7 +248,7 @@ export default function CaseConverterClient({
                     onClick={handleCopy}
                     disabled={!output}
                   >
-                    <Copy className="w-3 h-3" /> Copy
+                    <LuCopy className="w-3 h-3" /> Copy
                   </Button>
                 </div>
                 <Textarea

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import xmlFormat from "xml-formatter";
-import { Copy, Trash2, Code2, AlertCircle } from "lucide-react";
+import { LuCopy, LuTrash2, LuCode, LuCircleAlert } from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -94,10 +94,10 @@ export default function XmlFormatterClient({
               className="text-destructive hover:text-destructive hover:bg-destructive/10"
               title="Clear Input"
             >
-              <Trash2 className="w-4 h-4" />
+              <LuTrash2 className="w-4 h-4" />
             </Button>
             <Button onClick={handleCopy} className="gap-2">
-              <Copy className="w-4 h-4" /> Copy Result
+              <LuCopy className="w-4 h-4" /> Copy Result
             </Button>
           </div>
         </div>
@@ -171,14 +171,14 @@ export default function XmlFormatterClient({
           <Card className={`border-muted-foreground/20 shadow-sm flex flex-col h-full ${error ? "border-destructive/50" : ""}`}>
             <CardHeader className="pb-3 px-4 pt-4 border-b flex flex-row justify-between items-center h-[53px]">
               <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                <Code2 className="w-4 h-4" /> Formatted XML
+                <LuCode className="w-4 h-4" /> Formatted XML
               </CardTitle>
             </CardHeader>
             <CardContent className="flex-1 p-0 relative bg-muted/30">
               {error ? (
                 <div className="p-6 text-destructive flex flex-col gap-2">
                    <div className="flex items-center gap-2 font-semibold">
-                     <AlertCircle className="w-5 h-5" /> Error Parsing XML
+                     <LuCircleAlert className="w-5 h-5" /> Error Parsing XML
                    </div>
                    <p className="font-mono text-sm whitespace-pre-wrap breakdown-all">{error}</p>
                 </div>

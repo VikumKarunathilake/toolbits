@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import {
-  Copy,
-  Trash2,
-  Check,
-  RefreshCw,
-  Fingerprint,
-  Settings2,
-} from "lucide-react";
+  LuCopy,
+  LuTrash2,
+  LuCheck,
+  LuRefreshCw,
+  LuFingerprint,
+  LuSettings2,
+} from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -94,7 +94,7 @@ export default function UuidGeneratorClient({
 
           <div className="flex items-center gap-2">
             <Button onClick={handleGenerate} className="gap-2">
-              <RefreshCw className="w-4 h-4" /> Generate
+              <LuRefreshCw className="w-4 h-4" /> Generate
             </Button>
             <Separator orientation="vertical" className="h-8 mx-1" />
             <Button
@@ -103,7 +103,7 @@ export default function UuidGeneratorClient({
               onClick={handleClear}
               className="text-destructive hover:text-destructive hover:bg-destructive/10"
             >
-              <Trash2 className="w-4 h-4" />
+              <LuTrash2 className="w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function UuidGeneratorClient({
             <Card className="border-muted-foreground/20 shadow-sm">
               <CardHeader>
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                  <Settings2 className="w-4 h-4" /> Configuration
+                  <LuSettings2 className="w-4 h-4" /> Configuration
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -195,7 +195,7 @@ export default function UuidGeneratorClient({
             <Card className="flex flex-col h-full min-h-[500px] border-muted-foreground/20 shadow-sm bg-muted/30">
               <CardHeader className="pb-3 px-6 pt-6 flex flex-row items-center justify-between space-y-0">
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                  <Fingerprint className="w-4 h-4" /> Generated UUIDs
+                  <LuFingerprint className="w-4 h-4" /> Generated UUIDs
                 </CardTitle>
                 <Button
                   variant="ghost"
@@ -204,7 +204,7 @@ export default function UuidGeneratorClient({
                   onClick={handleCopy}
                   disabled={!output}
                 >
-                  <Copy className="w-3.5 h-3.5" /> Copy Result
+                  <LuCopy className="w-3.5 h-3.5" /> Copy Result
                 </Button>
               </CardHeader>
 

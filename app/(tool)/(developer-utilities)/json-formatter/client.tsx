@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import {
-  Copy,
-  Trash2,
-  Check,
-  AlertCircle,
-  FileJson,
-  Minimize2,
-  Wand2,
-} from "lucide-react";
+  LuCopy,
+  LuTrash2,
+  LuCheck,
+  LuCircleAlert,
+  LuFileJson,
+  LuMinimize2,
+  LuWand,
+} from "react-icons/lu";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -95,10 +95,10 @@ export default function JsonFormatterClient({
 
           <div className="flex items-center gap-2">
             <Button onClick={handleFormat} className="gap-2">
-              <Wand2 className="w-4 h-4" /> Format
+              <LuWand className="w-4 h-4" /> Format
             </Button>
             <Button variant="outline" onClick={handleMinify} className="gap-2">
-              <Minimize2 className="w-4 h-4" /> Minify
+              <LuMinimize2 className="w-4 h-4" /> Minify
             </Button>
             <Separator orientation="vertical" className="h-8 mx-1" />
             <Button
@@ -107,7 +107,7 @@ export default function JsonFormatterClient({
               onClick={handleClear}
               className="text-destructive hover:text-destructive hover:bg-destructive/10"
             >
-              <Trash2 className="w-4 h-4" />
+              <LuTrash2 className="w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function JsonFormatterClient({
           <Card className="flex flex-col h-full border-muted-foreground/20 shadow-sm">
             <CardHeader className="pb-3 px-6 pt-6">
               <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                <FileJson className="w-4 h-4" /> Input
+                <LuFileJson className="w-4 h-4" /> Input
               </CardTitle>
             </CardHeader>
             <CardContent className="flex-1 p-0 relative group">
@@ -136,7 +136,7 @@ export default function JsonFormatterClient({
                   variant="destructive"
                   className="border-0 bg-transparent p-0 [&>svg]:top-0 [&>svg]:text-destructive"
                 >
-                  <AlertCircle className="h-4 w-4" />
+                  <LuCircleAlert className="h-4 w-4" />
                   <AlertTitle className="ml-2">Syntax Error</AlertTitle>
                   <AlertDescription className="ml-2 font-mono text-xs mt-1">
                     {error}
@@ -150,7 +150,7 @@ export default function JsonFormatterClient({
           <Card className="flex flex-col h-full border-muted-foreground/20 shadow-sm bg-muted/30">
             <CardHeader className="pb-3 px-6 pt-6 flex flex-row items-center justify-between space-y-0">
               <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                <Check className="w-4 h-4" /> Output
+                <LuCheck className="w-4 h-4" /> Output
               </CardTitle>
               <Button
                 variant="ghost"
@@ -159,7 +159,7 @@ export default function JsonFormatterClient({
                 onClick={handleCopy}
                 disabled={!output}
               >
-                <Copy className="w-3.5 h-3.5" /> Copy
+                <LuCopy className="w-3.5 h-3.5" /> Copy
               </Button>
             </CardHeader>
 
@@ -174,7 +174,7 @@ export default function JsonFormatterClient({
                 </ScrollArea>
               ) : (
                 <div className="h-full flex flex-col items-center justify-center text-muted-foreground/40">
-                  <FileJson className="w-12 h-12 mb-3 opacity-20" />
+                  <LuFileJson className="w-12 h-12 mb-3 opacity-20" />
                   <p className="text-sm font-medium">
                     Processed output will appear here
                   </p>

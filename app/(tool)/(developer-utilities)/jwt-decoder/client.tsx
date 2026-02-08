@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ShieldCheck, Lock, AlertCircle, Copy } from "lucide-react";
+import { LuShieldCheck, LuLock, LuCircleAlert, LuCopy } from "react-icons/lu";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -95,11 +95,11 @@ export default function JwtDecoderClient({
         {/* Input Pane */}
         <Card className="border-muted-foreground/20 shadow-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
-            <Lock className="w-32 h-32" />
+            <LuLock className="w-32 h-32" />
           </div>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-primary" />
+              <LuShieldCheck className="w-5 h-5 text-primary" />
               JWT Token
             </CardTitle>
           </CardHeader>
@@ -112,7 +112,7 @@ export default function JwtDecoderClient({
             />
             {error && (
               <Alert variant="destructive" className="mt-4">
-                <AlertCircle className="h-4 w-4" />
+                <LuCircleAlert className="h-4 w-4" />
                 <AlertTitle>Decoding Error</AlertTitle>
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
@@ -138,7 +138,7 @@ export default function JwtDecoderClient({
                 onClick={() => handleCopy(header, "Header")}
                 disabled={!header}
               >
-                <Copy className="w-4 h-4" />
+                <LuCopy className="w-4 h-4" />
               </Button>
             </CardHeader>
             <CardContent className="flex-1">
@@ -170,7 +170,7 @@ export default function JwtDecoderClient({
                 onClick={() => handleCopy(payload, "Payload")}
                 disabled={!payload}
               >
-                <Copy className="w-4 h-4" />
+                <LuCopy className="w-4 h-4" />
               </Button>
             </CardHeader>
             <CardContent className="flex-1">

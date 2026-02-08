@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import {
-  ArrowRightLeft,
-  Copy,
-  Upload,
-  FileCode,
-  Check,
-  Trash2,
-  Download,
-} from "lucide-react";
+  LuArrowRightLeft,
+  LuCopy,
+  LuUpload,
+  LuFileCode,
+  LuCheck,
+  LuTrash2,
+  LuDownload,
+} from "react-icons/lu";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -125,7 +125,7 @@ export default function Base64ConverterClient({
                 <Card className="border-muted-foreground/20 shadow-sm flex flex-col h-full">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-base">
-                      <ArrowRightLeft className="w-4 h-4 text-primary" /> Input
+                      <LuArrowRightLeft className="w-4 h-4 text-primary" /> Input
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-4">
@@ -151,7 +151,7 @@ export default function Base64ConverterClient({
                         variant="ghost"
                         size="icon"
                       >
-                        <Trash2 className="w-4 h-4 text-destructive" />
+                        <LuTrash2 className="w-4 h-4 text-destructive" />
                       </Button>
                     </div>
                   </CardContent>
@@ -161,7 +161,7 @@ export default function Base64ConverterClient({
                 <Card className="border-muted-foreground/20 shadow-sm flex flex-col h-full bg-muted/30">
                   <CardHeader className="flex flex-row items-center justify-between">
                     <CardTitle className="flex items-center gap-2 text-base">
-                      <FileCode className="w-4 h-4 text-primary" /> Output
+                      <LuFileCode className="w-4 h-4 text-primary" /> Output
                     </CardTitle>
                     <Button
                       variant="ghost"
@@ -169,7 +169,7 @@ export default function Base64ConverterClient({
                       onClick={() => handleCopy(outputText)}
                       disabled={!outputText}
                     >
-                      <Copy className="w-4 h-4 mr-2" /> Copy
+                      <LuCopy className="w-4 h-4 mr-2" /> Copy
                     </Button>
                   </CardHeader>
                   <CardContent className="flex-1">
@@ -194,7 +194,7 @@ export default function Base64ConverterClient({
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex flex-col items-center justify-center border-2 border-dashed rounded-lg p-12 bg-muted/10 hover:bg-muted/20 transition-colors">
-                    <Upload className="w-12 h-12 text-muted-foreground mb-4" />
+                    <LuUpload className="w-12 h-12 text-muted-foreground mb-4" />
                     <Label htmlFor="file-upload" className="cursor-pointer">
                       <span className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">
                         Select File
@@ -216,7 +216,7 @@ export default function Base64ConverterClient({
                       <div className="flex items-center justify-between p-4 bg-muted/30 rounded-lg border">
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <FileCode className="w-5 h-5 text-primary" />
+                            <LuFileCode className="w-5 h-5 text-primary" />
                           </div>
                           <div>
                             <p className="font-medium text-sm">{fileName}</p>
@@ -245,7 +245,7 @@ export default function Base64ConverterClient({
                             size="sm"
                             onClick={() => handleCopy(fileOutput)}
                           >
-                            <Copy className="w-3 h-3 mr-2" /> Copy to Clipboard
+                            <LuCopy className="w-3 h-3 mr-2" /> Copy to Clipboard
                           </Button>
                         </div>
                         <Textarea

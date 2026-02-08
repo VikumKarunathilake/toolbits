@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Play, Pause, RotateCcw, Coffee, Briefcase, Bell } from "lucide-react";
+import { LuPlay, LuPause, LuRotateCcw, LuCoffee, LuBriefcase, LuBell } from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -147,13 +147,13 @@ export default function PomodoroTimerClient({
                 }`}
               >
                 {mode === "work" ? (
-                  <Briefcase
+                  <LuBriefcase
                     className={`w-8 h-8 ${
                       isActive ? "text-primary" : "text-muted-foreground"
                     }`}
                   />
                 ) : (
-                  <Coffee
+                  <LuCoffee
                     className={`w-8 h-8 ${
                       isActive ? "text-green-500" : "text-muted-foreground"
                     }`}
@@ -206,7 +206,7 @@ export default function PomodoroTimerClient({
                     onClick={resetTimer}
                     disabled={isActive && timeLeft === totalSeconds}
                   >
-                    <RotateCcw className="w-5 h-5" />
+                    <LuRotateCcw className="w-5 h-5" />
                   </Button>
 
                   <Button
@@ -219,9 +219,9 @@ export default function PomodoroTimerClient({
                     onClick={toggleTimer}
                   >
                     {isActive ? (
-                      <Pause className="w-8 h-8 fill-current" />
+                      <LuPause className="w-8 h-8 fill-current" />
                     ) : (
-                      <Play className="w-8 h-8 fill-current ml-1" />
+                      <LuPlay className="w-8 h-8 fill-current ml-1" />
                     )}
                   </Button>
 
@@ -236,7 +236,7 @@ export default function PomodoroTimerClient({
                       Notification.requestPermission();
                     }}
                   >
-                    <Bell className="w-5 h-5" />
+                    <LuBell className="w-5 h-5" />
                   </Button>
                 </div>
               </div>

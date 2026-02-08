@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Copy, RefreshCw, Palette, ArrowRightLeft } from "lucide-react";
+import { LuCopy, LuRefreshCw, LuPalette, LuArrowRightLeft } from "react-icons/lu";
 import { toast } from "sonner";
 import { colord, extend } from "colord";
 import namesPlugin from "colord/plugins/names";
@@ -222,7 +222,7 @@ export default function ColorConverterClient({
                         }
                         title={`Copy ${format.label}`}
                       >
-                        <Copy className="w-4 h-4" />
+                        <LuCopy className="w-4 h-4" />
                       </Button>
                     </div>
                   </div>

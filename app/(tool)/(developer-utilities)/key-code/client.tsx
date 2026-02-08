@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Copy, Keyboard } from "lucide-react";
+import { LuCopy, LuKeyboard } from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -89,7 +89,7 @@ export default function KeyCodeClient({
           <div className="flex items-center justify-center min-h-[400px] border-2 border-dashed border-muted-foreground/30 rounded-2xl bg-muted/10 animate-pulse">
             <div className="text-center space-y-4">
               <div className="mx-auto bg-background p-4 rounded-full shadow-sm w-fit">
-                <Keyboard className="w-12 h-12 text-muted-foreground" />
+                <LuKeyboard className="w-12 h-12 text-muted-foreground" />
               </div>
               <h2 className="text-2xl font-semibold text-muted-foreground">
                 Press any key on your keyboard
@@ -109,7 +109,7 @@ export default function KeyCodeClient({
                         copyToClipboard(eventInfo.keyCode.toString(), "Key Code")
                       }
                     >
-                      <Copy className="w-4 h-4" />
+                      <LuCopy className="w-4 h-4" />
                     </Button>
                 </div>
                 <CardHeader className="text-center pb-2">

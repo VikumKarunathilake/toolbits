@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react";
 import {
-  Copy,
-  RefreshCw,
-  FileCode,
-  Search,
-  Share2,
-  Settings2,
-  Check,
-} from "lucide-react";
+  LuCopy,
+  LuRefreshCw,
+  LuFileCode,
+  LuSearch,
+  LuShare2,
+  LuSettings2,
+  LuCheck,
+} from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -152,7 +152,7 @@ ${author ? `<meta name="author" content="${author}" />` : ""}
               className="text-destructive hover:text-destructive hover:bg-destructive/10"
               title="Clear All"
             >
-              <RefreshCw className="w-4 h-4" />
+              <LuRefreshCw className="w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -164,13 +164,13 @@ ${author ? `<meta name="author" content="${author}" />` : ""}
               <div className="px-6 pt-6 pb-0">
                 <TabsList className="grid w-full grid-cols-3">
                   <TabsTrigger value="basic" className="gap-2">
-                    <Search className="w-4 h-4" /> SEO
+                    <LuSearch className="w-4 h-4" /> SEO
                   </TabsTrigger>
                   <TabsTrigger value="social" className="gap-2">
-                    <Share2 className="w-4 h-4" /> Social
+                    <LuShare2 className="w-4 h-4" /> Social
                   </TabsTrigger>
                   <TabsTrigger value="advanced" className="gap-2">
-                    <Settings2 className="w-4 h-4" /> Settings
+                    <LuSettings2 className="w-4 h-4" /> Settings
                   </TabsTrigger>
                 </TabsList>
               </div>
@@ -376,7 +376,7 @@ ${author ? `<meta name="author" content="${author}" />` : ""}
           <Card className="flex flex-col h-full border-muted-foreground/20 shadow-sm bg-muted/30">
             <CardHeader className="pb-3 px-6 pt-6 flex flex-row items-center justify-between space-y-0">
               <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                <FileCode className="w-4 h-4" /> Generated HTML
+                <LuFileCode className="w-4 h-4" /> Generated HTML
               </CardTitle>
               <Button
                 variant="ghost"
@@ -384,7 +384,7 @@ ${author ? `<meta name="author" content="${author}" />` : ""}
                 className="h-8 gap-1.5 text-muted-foreground hover:text-foreground"
                 onClick={handleCopy}
               >
-                <Copy className="w-3.5 h-3.5" /> Copy
+                <LuCopy className="w-3.5 h-3.5" /> Copy
               </Button>
             </CardHeader>
 

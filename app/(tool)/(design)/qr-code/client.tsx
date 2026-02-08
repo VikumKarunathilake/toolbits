@@ -2,13 +2,13 @@
 
 import { useState, useRef } from "react";
 import {
-  Download,
-  RefreshCw,
-  QrCode,
-  Share2,
-  Copy,
-  Settings2,
-} from "lucide-react";
+  LuDownload,
+  LuRefreshCw,
+  LuQrCode,
+  LuShare2,
+  LuCopy,
+  LuSettings2,
+} from "react-icons/lu";
 import { toast } from "sonner";
 import { QRCodeCanvas } from "qrcode.react";
 
@@ -109,7 +109,7 @@ export default function QrCodeGeneratorClient({
               className="text-muted-foreground hover:text-foreground"
               title="Reset Defaults"
             >
-              <RefreshCw className="w-4 h-4" />
+              <LuRefreshCw className="w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function QrCodeGeneratorClient({
             <Card className="border-muted-foreground/20 shadow-sm">
               <CardHeader>
                 <CardTitle className="text-lg font-medium flex items-center gap-2">
-                  <Settings2 className="w-5 h-5 text-primary" /> Configuration
+                  <LuSettings2 className="w-5 h-5 text-primary" /> Configuration
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -269,7 +269,7 @@ export default function QrCodeGeneratorClient({
                     />
                   ) : (
                     <div className="w-[200px] h-[200px] flex items-center justify-center text-muted-foreground/50 bg-muted/20">
-                      <QrCode className="w-16 h-16 opacity-20" />
+                      <LuQrCode className="w-16 h-16 opacity-20" />
                     </div>
                   )}
                 </div>
@@ -281,14 +281,14 @@ export default function QrCodeGeneratorClient({
                     onClick={handleCopy}
                     disabled={!text}
                   >
-                    <Copy className="w-4 h-4" /> Copy
+                    <LuCopy className="w-4 h-4" /> Copy
                   </Button>
                   <Button
                     className="w-full gap-2"
                     onClick={handleDownload}
                     disabled={!text}
                   >
-                    <Download className="w-4 h-4" /> Download
+                    <LuDownload className="w-4 h-4" /> Download
                   </Button>
                 </div>
 

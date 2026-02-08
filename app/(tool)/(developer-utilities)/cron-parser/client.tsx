@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { Copy, Trash2, Clock, CalendarDays, AlertCircle } from "lucide-react";
+import { LuCopy, LuTrash2, LuClock, LuCalendarDays, LuCircleAlert } from "react-icons/lu";
 import { toast } from "sonner";
 import cronstrue from "cronstrue";
 import cronParser from "cron-parser";
@@ -106,7 +106,7 @@ export default function CronParserClient({
               className="text-destructive hover:text-destructive hover:bg-destructive/10"
               title="Clear Input"
             >
-              <Trash2 className="w-4 h-4" />
+              <LuTrash2 className="w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function CronParserClient({
             <Card className="border-muted-foreground/20 shadow-sm overflow-visible">
               <CardHeader className="pb-3">
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                  <Clock className="w-4 h-4" /> Expression
+                  <LuClock className="w-4 h-4" /> Expression
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -133,13 +133,13 @@ export default function CronParserClient({
                     className="font-mono text-xl h-14 text-center tracking-widest"
                   />
                   <Button variant="outline" size="icon" className="h-14 w-14 shrink-0" onClick={handleCopy}>
-                    <Copy className="w-5 h-5" />
+                    <LuCopy className="w-5 h-5" />
                   </Button>
                 </div>
                 
                 {error && (
                    <Alert variant="destructive" className="py-2">
-                    <AlertCircle className="h-4 w-4" />
+                     <LuCircleAlert className="h-4 w-4" />
                     <AlertTitle>Invalid Cron Expression</AlertTitle>
                     <AlertDescription className="text-xs font-mono">
                       {error}
@@ -158,7 +158,7 @@ export default function CronParserClient({
                       onClick={handleCopyDescription}
                       className="text-muted-foreground hover:text-primary h-8 text-xs"
                     >
-                      <Copy className="w-3 h-3 mr-1" /> Copy Description
+                      <LuCopy className="w-3 h-3 mr-1" /> Copy Description
                     </Button>
                   </div>
                 )}
@@ -169,7 +169,7 @@ export default function CronParserClient({
              <Card className="border-muted-foreground/20 shadow-sm">
               <CardHeader className="pb-3">
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                  <CalendarDays className="w-4 h-4" /> Upcoming Execution Times
+                  <LuCalendarDays className="w-4 h-4" /> Upcoming Execution Times
                 </CardTitle>
               </CardHeader>
               <CardContent>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Copy, Trash2, AlignLeft, Clock3, Type, Hash } from "lucide-react";
+import { LuCopy, LuTrash2, LuAlignLeft, LuClock3, LuType, LuHash } from "react-icons/lu";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -86,10 +86,10 @@ export default function WordCounterClient({
               className="text-destructive hover:text-destructive hover:bg-destructive/10"
               title="Clear Text"
             >
-              <Trash2 className="w-4 h-4" />
+              <LuTrash2 className="w-4 h-4" />
             </Button>
             <Button onClick={handleCopy} className="gap-2">
-              <Copy className="w-4 h-4" /> Copy Text
+              <LuCopy className="w-4 h-4" /> Copy Text
             </Button>
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function WordCounterClient({
             <Card className="border-muted-foreground/20 shadow-sm">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                  <AlignLeft className="w-4 h-4" /> Counts
+                  <LuAlignLeft className="w-4 h-4" /> Counts
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -149,7 +149,7 @@ export default function WordCounterClient({
             <Card className="border-muted-foreground/20 shadow-sm">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                  <Type className="w-4 h-4" /> Structure
+                  <LuType className="w-4 h-4" /> Structure
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -172,7 +172,7 @@ export default function WordCounterClient({
             <Card className="border-muted-foreground/20 shadow-sm bg-primary/5 border-primary/20">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-primary flex items-center gap-2">
-                  <Clock3 className="w-4 h-4" /> Reading Time
+                  <LuClock3 className="w-4 h-4" /> Reading Time
                 </CardTitle>
               </CardHeader>
               <CardContent>
