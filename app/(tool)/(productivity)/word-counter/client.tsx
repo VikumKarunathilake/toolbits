@@ -169,7 +169,7 @@ export default function WordCounterClient({
               </CardContent>
             </Card>
 
-            <Card className="border-muted-foreground/20 shadow-sm bg-primary/5 border-primary/20">
+            <Card className="shadow-sm bg-primary/5 border-primary/20">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium uppercase tracking-wider text-primary flex items-center gap-2">
                   <LuClock3 className="w-4 h-4" /> Reading Time

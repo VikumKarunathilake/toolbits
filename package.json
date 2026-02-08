@@ -2,6 +2,19 @@
   "name": "toolify",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "VikumKarunathilake",
+    "email": "vikumbk@yahoo.com"
+  }, 
+  "homepage": "https://toolbits.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VikumKarunathilake/toolbits.git",
+    "directory": "/"
+  },
+  "bugs": {
+    "url": "https://github.com/VikumKarunathilake/toolbits/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +23,6 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@types/cron": "^2.4.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "colord": "^2.9.3",
