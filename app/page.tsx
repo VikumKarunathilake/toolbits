@@ -19,7 +19,7 @@ import {
   LuQrCode,
   LuCaseUpper,
   LuArrowRight,
-
+  LuImage,
 } from "react-icons/lu";
 import {
   Card,
@@ -127,6 +127,12 @@ const categories: Category[] = [
         href: "/xml-formatter",
         icon: <LuFileCode className={iconClasses} />,
       },
+      {
+        title: "YAML to JSON",
+        description: "Convert YAML configurations to JSON and vice versa instantly.",
+        href: "/yaml-to-json",
+        icon: <LuFileCode className={iconClasses} />,
+      },
     ],
   },
   {
@@ -178,6 +184,12 @@ const categories: Category[] = [
         description: "Convert text case instantly: Uppercase, Lowercase, Title Case, camelCase, snake_case, and more.",
         href: "/case-converter",
         icon: <LuCaseUpper className={iconClasses} />,
+      },
+      {
+        title: "SVG Optimizer",
+        description: "Minify and optimize your SVG files to reduce file size. Remove metadata, comments, and unused attributes.",
+        href: "/svg-optimizer",
+        icon: <LuImage className={iconClasses} />,
       },
     ],
   },
