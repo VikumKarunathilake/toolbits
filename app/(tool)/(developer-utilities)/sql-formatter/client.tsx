@@ -82,7 +82,7 @@ export default function SqlFormatterClient({
   };
 
   return (
-    <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
+    <div className="flex-1 bg-muted/40 p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-6">
         
         {/* Header */}
@@ -171,12 +171,12 @@ export default function SqlFormatterClient({
                 Raw SQL
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex-1 p-0 relative">
+            <CardContent className="flex-1 p-0 relative overflow-hidden min-h-0">
               <Textarea
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Paste your SQL query here..."
-                className="w-full h-full resize-none border-0 focus-visible:ring-0 rounded-b-xl p-4 font-mono text-sm bg-transparent leading-relaxed"
+                className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-b-xl p-4 font-mono text-sm bg-transparent leading-relaxed"
                 spellCheck={false}
               />
             </CardContent>
@@ -189,7 +189,7 @@ export default function SqlFormatterClient({
                 <LuCode className="w-4 h-4" /> Formatted SQL
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex-1 p-0 relative bg-muted/30">
+            <CardContent className="flex-1 p-0 relative overflow-hidden min-h-0 bg-muted/30">
               {error ? (
                 <div className="p-6 text-destructive flex flex-col gap-2">
                    <div className="flex items-center gap-2 font-semibold">
@@ -202,7 +202,7 @@ export default function SqlFormatterClient({
                   readOnly
                   value={output}
                   placeholder="Formatted result will appear here..."
-                  className="w-full h-full resize-none border-0 focus-visible:ring-0 rounded-b-xl p-4 font-mono text-sm bg-transparent leading-relaxed text-primary"
+                  className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-b-xl p-4 font-mono text-sm bg-transparent leading-relaxed text-primary"
                   spellCheck={false}
                 />
               )}

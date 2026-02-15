@@ -64,7 +64,7 @@ export default function WordCounterClient({
   };
 
   return (
-    <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
+    <div className="flex-1 bg-muted/40 p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -98,12 +98,12 @@ export default function WordCounterClient({
           {/* Main Input Area */}
           <div className="lg:col-span-2 h-[calc(100vh-250px)] min-h-[500px]">
             <Card className="h-full border-muted-foreground/20 shadow-sm flex flex-col">
-              <CardContent className="p-0 flex-1 relative">
+              <CardContent className="p-0 flex-1 relative overflow-hidden min-h-0">
                 <Textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   placeholder="Start typing or paste your text here..."
-                  className="w-full h-full resize-none border-0 focus-visible:ring-0 rounded-xl p-6 font-mono text-base bg-transparent leading-relaxed"
+                  className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-xl p-6 font-mono text-base bg-transparent leading-relaxed"
                   spellCheck={false}
                 />
               </CardContent>

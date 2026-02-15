@@ -149,7 +149,7 @@ export default function SvgOptimizerClient() {
   };
 
   return (
-    <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
+    <div className="flex-1 bg-muted/40 p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -298,7 +298,7 @@ export default function SvgOptimizerClient() {
                            <LuFileCode2 className="w-4 h-4" /> SVG Source
                         </CardTitle>
                      </CardHeader>
-                     <CardContent className="p-0 flex-1 relative">
+                     <CardContent className="p-0 flex-1 relative overflow-hidden min-h-0">
                         <div
                           className={`relative w-full h-full flex flex-col ${
                             isDragging ? "bg-primary/10" : "bg-transparent"
@@ -311,7 +311,7 @@ export default function SvgOptimizerClient() {
                             value={svgInput}
                             onChange={(e) => setSvgInput(e.target.value)}
                             placeholder="Paste your SVG code here, or drag & drop an SVG file..."
-                            className={`w-full h-full resize-none border-0 focus-visible:ring-0 rounded-none p-4 font-mono text-sm leading-relaxed bg-transparent z-10 ${
+                            className={`absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-none p-4 font-mono text-sm leading-relaxed bg-transparent z-10 ${
                               isDragging ? "pointer-events-none" : ""
                             }`}
                             spellCheck={false}
@@ -359,11 +359,11 @@ export default function SvgOptimizerClient() {
                            <LuFileCode2 className="w-4 h-4" /> Optimized Source
                         </CardTitle>
                      </CardHeader>
-                     <CardContent className="p-0 flex-1 relative">
+                     <CardContent className="p-0 flex-1 relative overflow-hidden min-h-0">
                         <Textarea
                            value={optimizedSvg}
                            readOnly
-                           className="w-full h-full resize-none border-0 focus-visible:ring-0 rounded-none p-4 font-mono text-sm leading-relaxed bg-transparent text-primary"
+                           className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-none p-4 font-mono text-sm leading-relaxed bg-transparent text-primary"
                            spellCheck={false}
                         />
                      </CardContent>

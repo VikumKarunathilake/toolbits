@@ -141,7 +141,7 @@ export default function RegexTesterClient({
   };
 
   return (
-    <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
+    <div className="flex-1 bg-muted/40 p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-6">
         
         {/* Header */}
@@ -243,17 +243,12 @@ export default function RegexTesterClient({
                   Test String
                 </CardTitle>
               </CardHeader>
-              <CardContent className="flex-1 p-0 relative">
-                 {/* 
-                    Overlay approach for highlighting is tricky with scrolling.
-                    Instead, we will have a secondary view for "Results" which shows the highlighted text.
-                    The input area is just for input.
-                 */}
+              <CardContent className="flex-1 p-0 relative overflow-hidden min-h-0">
                 <Textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   placeholder="Paste your test string here..."
-                  className="w-full h-full resize-none border-0 focus-visible:ring-0 rounded-b-xl p-6 font-mono text-base bg-transparent leading-relaxed"
+                  className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-b-xl p-6 font-mono text-base bg-transparent leading-relaxed"
                   spellCheck={false}
                 />
               </CardContent>

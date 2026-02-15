@@ -72,7 +72,7 @@ export default function KeyCodeClient({
   };
 
   return (
-    <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
+    <div className="flex-1 bg-muted/40 p-4 md:p-8 font-sans">
       <div className="max-w-5xl mx-auto space-y-6">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>

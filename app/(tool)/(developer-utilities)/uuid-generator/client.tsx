@@ -79,7 +79,7 @@ export default function UuidGeneratorClient({
   };
 
   return (
-    <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
+    <div className="flex-1 bg-muted/40 p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -210,12 +210,12 @@ export default function UuidGeneratorClient({
 
               <Separator />
 
-              <CardContent className="flex-1 p-0 overflow-hidden relative h-full">
+              <CardContent className="flex-1 p-0 overflow-hidden relative h-full min-h-0">
                 <Textarea
                   value={output}
                   readOnly
                   placeholder="Generated UUIDs will appear here..."
-                  className="w-full h-full resize-none border-0 focus-visible:ring-0 rounded-none p-6 font-mono text-sm bg-transparent text-muted-foreground leading-relaxed"
+                  className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-none p-6 font-mono text-sm bg-transparent text-muted-foreground leading-relaxed"
                 />
               </CardContent>
             </Card>

@@ -60,7 +60,7 @@ export default function UrlEncoderClient({
   };
 
   return (
-    <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
+    <div className="flex-1 bg-muted/40 p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -101,12 +101,12 @@ export default function UrlEncoderClient({
                 <LuFileText className="w-4 h-4" /> Input
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex-1 p-0 relative group">
+            <CardContent className="flex-1 p-0 relative group overflow-hidden min-h-0">
               <Textarea
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Paste text or URL here (e.g. https://example.com/search?q=hello world)..."
-                className="w-full h-full min-h-[400px] resize-none border-0 focus-visible:ring-0 rounded-none p-6 font-mono text-sm bg-transparent"
+                className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-none p-6 font-mono text-sm bg-transparent"
                 spellCheck={false}
               />
             </CardContent>
@@ -131,12 +131,12 @@ export default function UrlEncoderClient({
 
             <Separator />
 
-            <CardContent className="flex-1 p-0 overflow-hidden relative">
+            <CardContent className="flex-1 p-0 overflow-hidden relative min-h-0">
               <Textarea
                 value={output}
                 readOnly
                 placeholder="Result will appear here..."
-                className="w-full h-full min-h-[400px] resize-none border-0 focus-visible:ring-0 rounded-none p-6 font-mono text-sm bg-transparent text-muted-foreground"
+                className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-none p-6 font-mono text-sm bg-transparent text-muted-foreground"
               />
             </CardContent>
           </Card>

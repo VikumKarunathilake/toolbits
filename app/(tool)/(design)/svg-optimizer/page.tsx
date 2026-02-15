@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import SvgOptimizerClient from "./client";
 
 export const metadata: Metadata = {
-  title: "SVG Optimizer | ToolBits",
+  title: "SVG Optimizer",
   description:
     "Minify and optimize SVG code online. Reduce file size by removing metadata, comments, and unused attributes.",
 };

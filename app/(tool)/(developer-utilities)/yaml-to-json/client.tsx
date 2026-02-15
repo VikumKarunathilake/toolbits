@@ -79,7 +79,7 @@ export default function YamlToJsonClient({
   };
 
   return (
-    <div className="min-h-screen bg-muted/40 p-4 md:p-8 font-sans">
+    <div className="flex-1 bg-muted/40 p-4 md:p-8 font-sans">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -142,7 +142,7 @@ export default function YamlToJsonClient({
                 </Button>
               </div>
             </CardHeader>
-            <CardContent className="p-0 flex-1 relative">
+            <CardContent className="p-0 flex-1 relative overflow-hidden min-h-0">
               <Textarea
                 value={yamlContent}
                 onChange={(e) => {
@@ -150,7 +150,7 @@ export default function YamlToJsonClient({
                   setLastActive("yaml");
                 }}
                 placeholder="Paste your YAML here..."
-                className="w-full h-full resize-none border-0 focus-visible:ring-0 rounded-xl p-4 font-mono text-sm leading-relaxed bg-transparent"
+                className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-xl p-4 font-mono text-sm leading-relaxed bg-transparent"
                 spellCheck={false}
               />
             </CardContent>
@@ -185,7 +185,7 @@ export default function YamlToJsonClient({
                 </Button>
               </div>
             </CardHeader>
-            <CardContent className="p-0 flex-1 relative">
+            <CardContent className="p-0 flex-1 relative overflow-hidden min-h-0">
               <Textarea
                 value={jsonContent}
                 onChange={(e) => {
@@ -193,7 +193,7 @@ export default function YamlToJsonClient({
                   setLastActive("json");
                 }}
                 placeholder="JSON output will appear here..."
-                className="w-full h-full resize-none border-0 focus-visible:ring-0 rounded-xl p-4 font-mono text-sm leading-relaxed bg-transparent"
+                className="absolute inset-0 w-full h-full resize-none border-0 focus-visible:ring-0 rounded-xl p-4 font-mono text-sm leading-relaxed bg-transparent"
                 spellCheck={false}
               />
             </CardContent>
