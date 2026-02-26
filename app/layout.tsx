@@ -62,6 +62,9 @@ export const metadata: Metadata = {
   verification: {
     google: "google-site-verification-id",
     yandex: "yandex-verification-id",
+    other: {
+      "6a97888e-site-verification": "53f18609655170e4f0308043c39d8385",
+    },
   },
   alternates: {
     canonical: "./",
